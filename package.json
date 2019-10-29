@@ -1,0 +1,42 @@
+{
+  "name": "frontend-starter",
+  "version": "1.0.0",
+  "description": "Webpack + TypeScript + React + ESLint",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "clean": "rm -rf ./dist ./node_modules package-lock.json",
+    "prod": "npm run build -- --env.mode production",
+    "dev": "npm run build -- --env.mode development",
+    "start:dev": "webpack-dev-server --open --env.mode development"
+  },
+  "browserslist": [
+    ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papan01/web-app-starter.git"
+  },
+  "keywords": [
+    "Webpack",
+    "TypeScript",
+    "React",
+    "ESLint"
+  ],
+  "author": "Louis_Peng",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/papan01/web-app-starter/issues"
+  },
+  "homepage": "https://github.com/papan01/web-app-starter#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0"
+  }
+}
