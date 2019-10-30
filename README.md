@@ -7,10 +7,12 @@ A boilerplate using React、TypeScript、Webpack。
 root-dir
 ├── /dist/
 ├── /src/
-│   ├── /js
+│   ├── /entry/
 │   │   ├──client.js
-│   ├── /templates
+│   ├── /sass/
+│   │   ├──style.scss
+│   ├── /templates/
 │   │   ├── index.html
 ├── package.json
-├── webpack.config.js
+└── webpack.config.js
 ```
