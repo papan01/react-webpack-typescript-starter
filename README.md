@@ -1,6 +1,6 @@
 # web-app-starter
 
-A boilerplate using React、TypeScript、Webpack。
+A boilerplate using React、TypeScript、Webpack、Babel。
 
 ### Directory Layout
 ```

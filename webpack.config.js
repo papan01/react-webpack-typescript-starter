@@ -13,7 +13,7 @@ module.exports = ({ mode }) => {
     return {
         mode : mode,
         entry: {
-           'client': resolvePath(SRC_DIR,'entry/client.js')
+           'client': resolvePath(SRC_DIR,'entry/client.tsx')
         },
         plugins:[ 
             new CleanWebpackPlugin(),
@@ -28,14 +28,13 @@ module.exports = ({ mode }) => {
                 }
             }),
             new MiniCssExtractPlugin({
-                // Options similar to the same options in webpackOptions.output
-                // both options are optional
                 filename: '[name].css',
                 chunkFilename: '[id].css',
             }),
         ],
         output: {
-            filename: '[name].bundle.js',
+            filename: isDev ? '[name].js' : '[name].[chunkhash:8].js',
+            chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash:8].chunk.js',
             path: DIST_DIR,
         },
         module: {
@@ -70,8 +69,19 @@ module.exports = ({ mode }) => {
                 {
                     test: /\.(woff|woff2|svg|eot|ttf|otf)$/,
                     use: ['file-loader?name=assets/fonts/[name].[ext]']
+                },
+                {
+                    test: /\.(ts|js)x?$/,
+                    exclude: /(node_modules|bower_components)/,
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env', '@babel/preset-react','@babel/preset-typescript']
+                    }
                 }
             ]
+        },
+        resolve: {
+            extensions: ['.ts', '.tsx', '.js', '.json']
         },
         devtool: isDev ? 'cheap-module-inline-source-map' : 'source-map',
     }
