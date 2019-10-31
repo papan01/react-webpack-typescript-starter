@@ -1,13 +1,15 @@
 import '../sass/style.scss';
 
-import React, { Component } from 'react'
+import React from 'react';
+import { render } from 'react-dom';
 
-export default class client extends Component {
-    render() {
-        return (
-            <div>
-                
-            </div>
-        )
-    }
+export default class App extends React.PureComponent {
+  render() {
+    return (
+      <div>
+        <h1>Hello Webpack</h1>
+      </div>
+    );
+  }
 }
+render(<App />, document.getElementById('app'));

@@ -1,0 +1,11 @@
+{
+    "parser": "babel-eslint",
+    "extends": ["airbnb-typescript"],
+    "rules": {
+        "semi": ["error", "always"]
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    }
+}

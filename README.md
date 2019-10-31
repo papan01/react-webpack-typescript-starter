@@ -14,5 +14,7 @@ root-dir
 │   ├── /templates/
 │   │   ├── index.html
 ├── package.json
+├── .eslintrc
+├── tsconfig.json
 └── webpack.config.js
 ```
