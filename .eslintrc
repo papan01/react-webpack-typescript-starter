@@ -1,11 +1,60 @@
 {
-    "parser": "babel-eslint",
-    "extends": ["airbnb-typescript"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": ".",
+        "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
+        "sourceType": "module", // Allows for the use of imports
+        "ecmaFeatures": {
+            "jsx": true // Allows for the parsing of JSX
+        }
+    },
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:prettier/recommended",
+        "prettier",
+        "prettier/@typescript-eslint",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "react"
+    ],
     "rules": {
-        "semi": ["error", "always"]
+      /**
+      *@description rules of eslint-plugin-import
+      */
+      "import/no-unresolved": "off",
+      /**
+      * @description rules of eslint-plugin-react
+      */
+      "react/jsx-filename-extension": ["warn", {
+        "extensions": [".jsx", ".tsx"]
+      }],
+      /**
+      * @description rules of eslint-plugin-prettier
+      */
+      "prettier/prettier": [
+        "error", {
+          "singleQuote": true,
+          "printWidth": 80,
+          "trailingComma": "all"
+        }
+      ],
+      /**
+      * @description rules of eslint-plugin-react-hooks
+      */
+      "react-hooks/rules-of-hooks": "error"
     },
     "env": {
-        "browser": true,
-        "node": true
+        "browser": true
+    },
+    "settings": {
+        "react": {
+          "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
+        }
     }
 }

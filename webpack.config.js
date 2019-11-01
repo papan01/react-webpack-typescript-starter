@@ -21,7 +21,9 @@ module.exports = ({ mode }) => {
         title: '🐠🦍🐙',
         filename: 'index.html',
         template: resolvePath(SRC_DIR, 'templates/index.html'),
-        meta: { viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no' },
+        meta: {
+          viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+        },
         minify: {
           removeComments: true,
           collapseWhitespace: false,
@@ -34,7 +36,9 @@ module.exports = ({ mode }) => {
     ],
     output: {
       filename: isDev ? '[name].js' : '[name].[chunkhash:8].js',
-      chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash:8].chunk.js',
+      chunkFilename: isDev
+        ? '[name].chunk.js'
+        : '[name].[chunkhash:8].chunk.js',
       path: DIST_DIR,
     },
     module: {
@@ -74,14 +78,20 @@ module.exports = ({ mode }) => {
           test: /\.(ts|js)x?$/,
           exclude: /(node_modules|bower_components)/,
           include: [SRC_DIR],
-          use: [{
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+          use: [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: [
+                  '@babel/preset-env',
+                  '@babel/preset-react',
+                  '@babel/preset-typescript',
+                ],
+              },
             },
-          }, {
-            loader: 'eslint-loader',
-          },
+            {
+              loader: 'eslint-loader',
+            },
           ],
         },
       ],
