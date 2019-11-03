@@ -12,11 +12,11 @@
     "extends": [
         "airbnb",
         "airbnb/hooks",
+        "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:prettier/recommended",
         "prettier",
-        "prettier/@typescript-eslint",
-        "plugin:react/recommended"
+        "prettier/@typescript-eslint"
     ],
     "plugins": [
         "@typescript-eslint",
@@ -24,10 +24,6 @@
         "react"
     ],
     "rules": {
-      /**
-      *@description rules of eslint-plugin-import
-      */
-      "import/no-unresolved": "off",
       /**
       * @description rules of eslint-plugin-react
       */
@@ -47,14 +43,33 @@
       /**
       * @description rules of eslint-plugin-react-hooks
       */
-      "react-hooks/rules-of-hooks": "error"
+      "react-hooks/rules-of-hooks": "error",
+      /**
+      * @description rules of eslint-plugin-import
+      */
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
     },
     "env": {
         "browser": true
     },
     "settings": {
+        "import/resolver": {
+            "node": {
+              "extensions": [".js", ".jsx", ".ts", ".tsx"]
+            }
+        },
         "react": {
           "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
         }
-    }
+    },
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[tj]s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
 }
