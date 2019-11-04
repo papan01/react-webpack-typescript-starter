@@ -1,3 +1,6 @@
-p {
-    color:#FF00FF;
-}
+@import './base//settings';
+@import './base/breakpoint';
+@import './base//normalize';
+
+
+@import '../../header/header';

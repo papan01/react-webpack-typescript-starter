@@ -14,13 +14,11 @@ root-dir
 │   │   │   ├── /sass/
 │   │   │   │   └── ...
 │   │   │   └── app.tsx
-│   │   └── index.d.tes
+│   │   └── index.d.ts
 │   ├── /entry/
-│   │   ├──client.js
-│   ├── /sass/
-│   │   ├──style.scss
+│   │   └── client.tsx
 │   └── /templates/
-│       ├── index.html
+│       └── index.html
 ├── babel.config.js
 ├── jest.confing.js
 ├── package.json

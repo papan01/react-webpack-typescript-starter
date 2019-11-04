@@ -5,9 +5,7 @@
         "tsconfigRootDir": ".",
         "ecmaVersion": 2018, // Allows for the parsing of modern ECMAScript features
         "sourceType": "module", // Allows for the use of imports
-        "ecmaFeatures": {
-            "jsx": true // Allows for the parsing of JSX
-        }
+        "createDefaultProgram": true //https://github.com/typescript-eslint/typescript-eslint/issues/864
     },
     "extends": [
         "airbnb",
@@ -69,6 +67,14 @@
         ],
         "env": {
           "jest": true
+        }
+      },
+      {
+        //for vscode-eslint
+        "files": ["*.js","./tools/*.[tj]s"],
+        "rules": {
+          "@typescript-eslint/explicit-function-return-type": "off",
+          "@typescript-eslint/no-var-requires": "off"
         }
       }
     ]

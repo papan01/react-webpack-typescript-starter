@@ -1,12 +1,11 @@
 import React from 'react';
 import './sass/app.scss';
-import Logo from './logo.png';
+import Header from '../header/header';
 
 export default function App(): JSX.Element {
   return (
     <div>
-      <h1>Hello World</h1>
-      <img src={Logo} alt="PAPAN's World" />
+      <Header />
     </div>
   );
 }

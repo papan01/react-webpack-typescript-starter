@@ -10,7 +10,7 @@
     "dev": "npm run build -- --env.mode development",
     "start:prod": "webpack-dev-server --open --env.mode production",
     "start:dev": "webpack-dev-server --open --env.mode development",
-    "lint": "eslint --ext .ts --ext .tsx ./src",
+    "lint": "eslint --ext .ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
     "test": "jest"
   },
