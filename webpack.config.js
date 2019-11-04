@@ -100,5 +100,10 @@ module.exports = ({ mode }) => {
       extensions: ['.ts', '.tsx', '.js', '.json'],
     },
     devtool: isDev ? 'cheap-module-inline-source-map' : 'source-map',
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+      },
+    },
   };
 };

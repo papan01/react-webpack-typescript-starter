@@ -1,11 +1,13 @@
 import React from 'react';
-import './sass/app.scss';
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import '../../layout/main.scss';
 import Header from '../header/header';
 
 export default function App(): JSX.Element {
   return (
-    <div>
+    <Router>
       <Header />
-    </div>
+    </Router>
   );
 }

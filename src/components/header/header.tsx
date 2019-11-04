@@ -1,19 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Icon from './logo.png';
 
-const logo: React.FunctionComponent = () => {
+const Logo: React.FunctionComponent = () => {
   return (
     <div className="logo">
-      <img className="papan-logo" alt="PAPAN's logo" />
+      <Link to="/">
+        <img className="papan-logo" src={Icon} alt="PAPAN's logo" />
+      </Link>
     </div>
   );
 };
-const Logo = React.memo(logo);
+const LogoMemo = React.memo(Logo);
 
 const Header: React.FunctionComponent = () => {
+  useEffect(() => {
+    import(/* webpackChunkName: 'header' */ './header.scss');
+  });
+
   return (
     <div className="top-bar">
-      <Logo />
-      <p>I&apos;m Header</p>
+      <LogoMemo />
     </div>
   );
 };
