@@ -1,7 +1,7 @@
 {
-  "name": "frontend-starter",
+  "name": "react-webpack-typescript-starter",
   "version": "1.0.0",
-  "description": "Webpack、React、TypeScript、Babel、ESlint、Jest、Enzyme",
+  "description": "Webpack、React、TypeScript、Babel、ESlint、Jest、enzyme、sass",
   "private": true,
   "scripts": {
     "build": "webpack",
@@ -20,22 +20,17 @@
     "Firefox ESR",
     "not ie < 9"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/papan01/web-app-starter.git"
-  },
   "keywords": [
     "Webpack",
     "TypeScript",
     "React",
-    "Babel"
+    "Babel",
+    "ESlint",
+    "Jest",
+    "enzyme"
   ],
   "author": "Louis_Peng",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/papan01/web-app-starter/issues"
-  },
-  "homepage": "https://github.com/papan01/web-app-starter#readme",
   "devDependencies": {
     "@babel/cli": "^7.6.4",
     "@babel/core": "^7.6.4",
