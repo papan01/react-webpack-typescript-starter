@@ -1,6 +1,6 @@
 # react-webpack-typescript-starter
 
-A frontend empty shell using React、Webpack、TypeScript、、Babel、ESlint、Jest、Enzyme。
+A frontend empty shell using React、Webpack、TypeScript、Babel、ESlint、Jest、Enzyme。
 
 ### Directory Layout
 ```
@@ -28,10 +28,12 @@ npm install
 
 #### script
 ```
-1. npm run test # using enzyme with Jest to run test
-2. npm run lint # or npm run lint:fix - ESlint with airbnb、typescript、prettier
-3. npm run dev # or npm run prod - the webpack will build your application(with linting) : development or production mode
-4. npm run start:dev # or npm run start:prod - run webpack-dev-server(with linting) : development or production mode
-5. npm run clean # remove ./dist ./node_modules package-lock.json
+1. npm run test      # using enzyme with Jest to run test
+2. npm run lint      # or npm run lint:fix - ESlint with airbnb、typescript、prettier
+3. npm run dev       # or npm run prod - the webpack will build your application(with linting) 
+                       : development or production mode
+4. npm run start:dev # or npm run start:prod - run webpack-dev-server(with linting) 
+                       : development or production mode
+5. npm run clean     # remove ./dist ./node_modules package-lock.json
 ```
 
