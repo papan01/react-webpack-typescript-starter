@@ -12,6 +12,7 @@
     "start:dev": "webpack-dev-server --open --env.mode development",
     "lint": "eslint --ext .ts,.tsx ./src",
     "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"**/*.{json,md,scss}\"",
     "test": "jest"
   },
   "browserslist": [
