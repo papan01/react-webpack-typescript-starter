@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import ReactDOM from 'react-dom';
 import { mount } from 'enzyme';
-import App from '../app';
+import App from '../index';
 
 describe('App', (): void => {
   const app = <App />;
