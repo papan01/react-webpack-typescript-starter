@@ -46,7 +46,16 @@
       * @description rules of eslint-plugin-import
       */
       "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
-      "import/no-unresolved": ["error", {"caseSensitive": false }]
+      "import/extensions":[
+        "error",
+        "ignorePackages",
+        {
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
     },
     "env": {
         "browser": true,
