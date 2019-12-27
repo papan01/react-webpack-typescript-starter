@@ -45,11 +45,12 @@
       /**
       * @description rules of eslint-plugin-import
       */
-      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": true}],
+      "import/no-unresolved": ["error", {"caseSensitive": false }]
     },
     "env": {
         "browser": true,
-        "jest": true,
+        "jest": true
     },
     "settings": {
         "import/resolver": {
@@ -57,7 +58,6 @@
             "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
         },
-        "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
         "react": {
           "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
         }
