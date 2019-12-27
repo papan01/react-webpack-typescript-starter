@@ -57,9 +57,7 @@
             "extensions": [".js", ".jsx", ".ts", ".tsx"]
           }
         },
-        "import/parsers": {
-          "@typescript-eslint/parser":[".ts", ".tsx"]
-        },
+        "import/extensions": [".js", ".jsx", ".ts", ".tsx"],
         "react": {
           "version": "detect" // Tells eslint-plugin-react to automatically detect the version of React to use
         }
